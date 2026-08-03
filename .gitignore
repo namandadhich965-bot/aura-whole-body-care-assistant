@@ -60,3 +60,5 @@ service-account*.json
 .cursor/
 .continue/
 .windsurf/
+
+.vercel

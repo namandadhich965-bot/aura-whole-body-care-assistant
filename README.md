@@ -77,6 +77,9 @@ The project uses Vitest. The current test coverage checks request and result sch
 2. Run `npm run build`.
 3. Deploy the Next.js app to your hosting platform of choice.
 
+### Live Production URL
+https://project-azure-ten-87.vercel.app
+
 ## Safety
 AURA provides general cosmetic self-care guidance only. It does not diagnose, prescribe, promise results, or recommend unsafe DIY treatments.
 
