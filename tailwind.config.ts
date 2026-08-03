@@ -1,55 +1,3 @@
-// /** @type {import('tailwindcss').Config} */
-// module.exports = {
-//   content: [
-//     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-//     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-//     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-//   ],
-//   theme: {
-//     extend: {
-//       colors: {
-//         accent: {
-//           50: '#fef7ee',
-//           100: '#fdedd6',
-//           200: '#fad6ad',
-//           300: '#f6b87a',
-//           400: '#f19245',
-//           500: '#ed751f',
-//           600: '#e05c13',
-//           700: '#b84410',
-//           800: '#933813',
-//           900: '#773014',
-//           950: '#3f1508',
-//         },
-//         neutral: {
-//           50: '#fafafa',
-//           100: '#f5f5f5',
-//           200: '#e5e5e5',
-//           300: '#d4d4d4',
-//           400: '#a3a3a3',
-//           500: '#737373',
-//           600: '#525252',
-//           700: '#404040',
-//           800: '#262626',
-//           900: '#171717',
-//           950: '#0a0a0a',
-//         },
-//       },
-//       fontFamily: {
-//         sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-//       },
-//       borderRadius: {
-//         'xl': '1rem',
-//         '2xl': '1.5rem',
-//       },
-//       boxShadow: {
-//         'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
-//         'card': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)',
-//       },
-//     },
-//   },
-//   plugins: [],
-// }
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -60,35 +8,72 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        accent: {
-          50: "#fef7ee",
-          100: "#fdedd6",
-          200: "#fad6ad",
-          300: "#f6b87a",
-          400: "#f19245",
-          500: "#ed751f",
-          600: "#e05c13",
-          700: "#b84410",
-          800: "#933813",
-          900: "#773014",
-          950: "#3f1508",
+        background: {
+          DEFAULT: "var(--background)",
+          soft: "var(--background-soft)",
         },
-        neutral: {
-          50: "#fafafa",
-          100: "#f5f5f5",
-          200: "#e5e5e5",
-          300: "#d4d4d4",
-          400: "#a3a3a3",
-          500: "#737373",
-          600: "#525252",
-          700: "#404040",
-          800: "#262626",
-          900: "#171717",
-          950: "#0a0a0a",
+        surface: {
+          DEFAULT: "var(--surface)",
+          elevated: "var(--surface-elevated)",
         },
+        sage: {
+          DEFAULT: "rgb(157, 185, 166)",
+          light: "rgba(157, 185, 166, 0.16)",
+          dark: "rgb(113, 141, 122)",
+          50: "rgba(157, 185, 166, 0.12)",
+          100: "rgba(157, 185, 166, 0.12)",
+          200: "rgba(157, 185, 166, 0.28)",
+          300: "rgba(157, 185, 166, 0.28)",
+          500: "rgb(157, 185, 166)",
+          600: "rgb(113, 141, 122)",
+          700: "rgb(157, 185, 166)",
+        },
+        terracotta: {
+          DEFAULT: "rgb(184, 143, 120)",
+          50: "rgba(184, 143, 120, 0.1)",
+        },
+        cream: {
+          DEFAULT: "rgb(229, 222, 210)",
+        },
+        amber: {
+          100: "rgba(229, 222, 210, 0.1)",
+          200: "rgba(229, 222, 210, 0.18)",
+          700: "var(--accent-cream)",
+          800: "var(--accent-cream)",
+        },
+        charcoal: {
+          500: "var(--text-secondary)",
+          600: "var(--text-secondary)",
+          700: "var(--text-secondary)",
+          800: "var(--text-primary)",
+          900: "var(--text-primary)",
+        },
+        warmGrey: {
+          50: "rgba(210, 230, 218, 0.05)",
+          100: "var(--text-secondary)",
+          200: "var(--text-secondary)",
+          300: "var(--text-muted)",
+          400: "var(--text-muted)",
+          500: "var(--text-muted)",
+          600: "var(--text-muted)",
+        },
+        primary: {
+          DEFAULT: "var(--text-primary)",
+        },
+        secondary: {
+          DEFAULT: "var(--text-secondary)",
+        },
+        muted: {
+          DEFAULT: "var(--text-muted)",
+        },
+      },
+      borderColor: {
+        soft: "var(--border-soft)",
+        strong: "var(--border-strong)",
       },
       fontFamily: {
         sans: [
+          "Inter",
           "system-ui",
           "-apple-system",
           "BlinkMacSystemFont",
@@ -102,8 +87,8 @@ module.exports = {
         "2xl": "1.5rem",
       },
       boxShadow: {
-        soft: "0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)",
-        card: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)",
+        soft: "var(--shadow-soft)",
+        card: "0 8px 28px rgba(0, 0, 0, 0.18)",
       },
     },
   },
