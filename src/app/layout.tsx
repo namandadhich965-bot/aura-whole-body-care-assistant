@@ -1,15 +1,8 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { siteConfig } from '@/config/site';
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: {
@@ -51,7 +44,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className="font-sans antialiased">
         <a
           href="#main-content"
           className="absolute left-4 top-4 z-50 rounded-full border border-strong bg-surface px-4 py-2 text-sm text-primary shadow-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(157,185,166,0.9)]"

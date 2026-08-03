@@ -12,9 +12,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@react-three/drei": "^10.7.7",
-    "@react-three/fiber": "^9.7.0",
-    "@types/three": "^0.185.3",
+    "@react-three/drei": "^9.112.6",
+    "@react-three/fiber": "^8.17.14",
+    "@types/three": "^0.170.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.43.0",
     "lucide-react": "^1.28.0",
@@ -23,7 +23,7 @@
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
     "tailwind-merge": "^3.6.0",
-    "three": "^0.185.1",
+    "three": "^0.170.0",
     "zod": "^3.23.0"
   },
   "devDependencies": {
