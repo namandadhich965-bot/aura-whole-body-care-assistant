@@ -24,24 +24,27 @@ export function Footer() {
               <ul className="mt-4 space-y-3">
                 {group.links
                   .filter((link) => !!link.href)
-                  .map((link) => (
-                    <li key={link.href}>
-                      {link.href.startsWith('http') ? (
-                        <a
-                          href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm transition-colors hover:text-primary"
-                        >
-                          {link.label}
-                        </a>
-                      ) : (
-                        <Link href={link.href} className="text-sm transition-colors hover:text-primary">
-                          {link.label}
-                        </Link>
-                      )}
-                    </li>
-                  ))}
+                  .map((link) => {
+                    const href = link.href!;
+                    return (
+                      <li key={href}>
+                        {href.startsWith('http') ? (
+                          <a
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm transition-colors hover:text-primary"
+                          >
+                            {link.label}
+                          </a>
+                        ) : (
+                          <Link href={href} className="text-sm transition-colors hover:text-primary">
+                            {link.label}
+                          </Link>
+                        )}
+                      </li>
+                    );
+                  })}
               </ul>
             </div>
           ))}

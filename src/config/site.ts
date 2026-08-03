@@ -18,7 +18,8 @@ export interface SiteConfig {
   author: string;
 }
 
-const githubUrl = process.env.NEXT_PUBLIC_GITHUB_URL || '';
+const GITHUB_FALLBACK = 'https://github.com/namandadhich965-bot/aura-whole-body-care-assistant';
+const githubUrl = process.env.NEXT_PUBLIC_GITHUB_URL || GITHUB_FALLBACK;
 const demoVideoUrl = process.env.NEXT_PUBLIC_DEMO_VIDEO_URL || '';
 const projectDocUrl = process.env.NEXT_PUBLIC_PROJECT_DOC_URL || '';
 const deployedUrl = process.env.NEXT_PUBLIC_DEPLOYED_URL || 'https://aura.app';
@@ -31,7 +32,7 @@ export const siteConfig: SiteConfig = {
   description: 'AURA is a friendly whole-body cosmetic-care assistant that builds short routines from one concern and a few simple answers.',
   url: deployedUrl,
   links: {
-    github: githubUrl || undefined,
+    github: githubUrl,
     demoVideo: demoVideoUrl || undefined,
     projectDoc: projectDocUrl || undefined,
   },
@@ -63,8 +64,8 @@ export const footerNavGroups = [
     title: 'Project',
     links: [
       { label: 'About', href: '/about' },
-      ...(siteConfig.links.github ? [{ label: 'GitHub Repository', href: siteConfig.links.github }] : []),
-      ...(siteConfig.links.demoVideo ? [{ label: 'Demo Video', href: siteConfig.links.demoVideo }] : []),
+      { label: 'GitHub Repository', href: siteConfig.links.github },
+      { label: 'Demo Video', href: siteConfig.links.demoVideo || '/#demo' },
       ...(siteConfig.links.projectDoc ? [{ label: 'Project Document', href: siteConfig.links.projectDoc }] : []),
     ],
   },
