@@ -197,7 +197,7 @@ html {
   }
 
   .text-amber-800,
-  .text-amt-700 {
+  .text-amber-700 {
     color: var(--accent-cream);
   }
 
@@ -229,4 +229,13 @@ html {
   width: min(100% - 2rem, 1200px);
   margin-left: auto;
   margin-right: auto;
+}
+
+@keyframes slowPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+.animation-slowPulse {
+  animation: slowPulse 8s ease-in-out infinite;
 }
